@@ -1,6 +1,8 @@
 from queues import Stack
 
 lifo = Stack("9th", "8th", "7th")
+for element in lifo:
+    print(element)
 
 lifo = []
 
@@ -15,5 +17,4 @@ lifo.pop()
 lifo.pop()
 '7th'
 
-for element in lifo:
-    print(element)
+
