@@ -1,7 +1,4 @@
 from heapq import heappush
-from heapq import heappop
-from queues import PriorityQueue
-
 
 colors = []
 heappush(colors, "red")
@@ -9,6 +6,8 @@ heappush(colors, "apple")
 heappush(colors, "banana")
 
 print(colors)
+
+from heapq import heappop
 
 print(heappop(colors))
 print(colors)
@@ -21,6 +20,7 @@ person3 = ("Ross", "Green", 29)
 print(person1 < person2)
 print(person2 < person3)
 
+from queues import PriorityQueue
 
 CRITICAL = 3
 IMPORTANT = 2
@@ -36,3 +36,4 @@ print(messages.dequeue())
 print(messages.dequeue())
 print(messages.dequeue())
 print(messages.dequeue())
+
