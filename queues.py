@@ -1,17 +1,16 @@
 from collections import deque
 from heapq import heappop, heappush
 
-class IterableMixin:
+class Queue:
+    def __init__(self, *elements):
+        self._elements = deque(elements)
+
     def __len__(self):
         return len(self._elements)
 
     def __iter__(self):
         while len(self) > 0:
             yield self.dequeue()
-
-class Queue(IterableMixin):
-    def __init__(self, *elements):
-        self._elements = deque(elements)
 
     def enqueue(self, element):
         self._elements.append(element)
@@ -21,12 +20,12 @@ class Queue(IterableMixin):
 
 class Stack(Queue):
     def dequeue(self):
-        return self.elements.pop()
+        return self._elements.pop()
 
     def enqueue(self, element):
         self._elements.append(element)
 
-class PriorityQueue(IterableMixin):
+class PriorityQueue:
     def __init__(self):
         self._elements = []
 

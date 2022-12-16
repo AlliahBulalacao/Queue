@@ -1,20 +1,18 @@
 from queues import Stack
 
-lifo = Stack("9th", "8th", "7th")
+lifo = Stack("1st", "2nd", "3rd")
 for element in lifo:
     print(element)
 
 lifo = []
 
-lifo.append("9th")
-lifo.append("8th")
-lifo.append("7th")
+lifo.append("1st")
+lifo.append("2nd")
+lifo.append("3rd ")
 
 lifo.pop()
-'9th'
 lifo.pop()
-'8th'
 lifo.pop()
-'7th'
+
 
 

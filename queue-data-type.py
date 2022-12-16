@@ -14,12 +14,21 @@ fifo.dequeue()
 
 from queues import Queue
 
-fifo = Queue("9th", "8th", "7th")
+fifo = Queue()
+fifo.enqueue("red")
+fifo.enqueue("yellow")
+fifo.enqueue("blue")
+
+fifo.dequeue()
+fifo.dequeue()
+fifo.dequeue()
+
+fifo = Queue("red", "yellow", "blue")
 len(fifo)
 
 for element in fifo:
      print(element)
 
-len(fifo)
+
 
 
